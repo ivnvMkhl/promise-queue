@@ -35,7 +35,7 @@ const taskOnQueue = queue.enqueue(task);
 taskOnQueue.then((fetchResponse) => fetchResponce.json());
 ```
 
-You can use [AbortController]() to reject task promise.
+You can use [AbortController](https://developer.mozilla.org/ru/docs/Web/API/AbortController) to reject task promise.
 
 ```TypeScript
 import { PromiseQueue } from "@mkhl_ivnv/promise-queue";
