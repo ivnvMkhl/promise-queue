@@ -1,21 +1,18 @@
 {
-  "name": "promise-queue",
-  "version": "0.0.1",
+  "name": "@mkhl_ivnv/promise-queue",
+  "version": "0.0.2",
   "description": "A library for organizing a queue of promises allows developers to manage and execute asynchronous operations sequentially or concurrency streams.",
-  "main": "src/index.ts",
-  "scripts": {
-    "build": "npm run test && rm -rf ./build && tsc",
-    "test": "vitest run",
-    "watch-test": "vitest"
+  "main": "build/index.js",
+  "homepage": "https://github.com/ivnvMkhl/promise-queue",
+  "author": "iMkhl <mkhl.ivnv@gmail.com> (https://www.npmjs.com/~mkhl_ivnv)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivnvMkhl/promise-queue.git"
   },
-  "repository": "ivnvMkhl/promise-queue",
   "exports": {
     "types": "./build/index.d.ts",
     "default": "./build/index.js"
-  },
-  "sideEffects": false,
-  "engines": {
-    "node": ">=18"
   },
   "files": [
     "build"
@@ -44,8 +41,14 @@
     "promises",
     "bluebird"
   ],
-  "author": "iMkhl, mkhl.ivnv@gmail.com",
-  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "npm run test && rm -rf ./build && tsc",
+    "test": "vitest run",
+    "watch-test": "vitest"
+  },
   "devDependencies": {
     "typescript": "5.8.2",
     "vitest": "3.0.9"
