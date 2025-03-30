@@ -1,4 +1,4 @@
-name: Node.js Package
+name: Testin on push and PR
 
 on: [push, pull_request]
 
