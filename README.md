@@ -1,30 +1,19 @@
-## Install
+# Promise Queue
 
-```sh
-npm i @mkhl_ivnv/promise-queue
+https://img.shields.io/npm/v/promise-queue.svg
+https://img.shields.io/badge/License-MIT-yellow.svg
+
+A promise queue with configurable concurrency for limiting simultaneous task execution.
+
+## Installation
+
+```bash
+npm install promise-queue
 ```
 
-## Import
+## Basic Usage
 
-Use the ESM imports
-
-```TypeScript
-import { PromiseQueue } from "@mkhl_ivnv/promise-queue";
-```
-
-## Usage
-
-Create new instance of PromiseQueue and be shure specify concurrency on constructor `>= 1`
-
-```TypeScript
-import { PromiseQueue } from "@mkhl_ivnv/promise-queue";
-
-const queue = new PromiseQueue({ concurrency: 1 });
-```
-
-Use the public method `enqueue` to add new task on queue. This method returned new promise that includes queue waiting time and task execution time.
-
-```TypeScript
+```JavaScript
 import { PromiseQueue } from "@mkhl_ivnv/promise-queue";
 
 const queue = new PromiseQueue({ concurrency: 1 });
@@ -35,9 +24,19 @@ const taskOnQueue = queue.enqueue(task);
 taskOnQueue.then((fetchResponse) => fetchResponce.json());
 ```
 
-You can use [AbortController](https://developer.mozilla.org/ru/docs/Web/API/AbortController) to reject task promise.
+## Configuration Options
 
-```TypeScript
+```JavaScript
+const queue = new PromiseQueue({
+  concurrency: 3,    // Maximum number of tasks running concurrently (default: 1)
+});
+```
+
+## API Reference
+
+You can use AbortController to reject task promise.
+
+```JavaScript
 import { PromiseQueue } from "@mkhl_ivnv/promise-queue";
 
 const queue = new PromiseQueue({ concurrency: 1 });
@@ -51,3 +50,4 @@ abort();
 
 taskOnQueue.then((fetchResponse) => fetchResponce.json());
 ```
+
