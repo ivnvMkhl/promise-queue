@@ -1,7 +1,7 @@
 # Promise Queue
 
-https://img.shields.io/npm/v/promise-queue.svg
-https://img.shields.io/badge/License-MIT-yellow.svg
+[![npm version](https://img.shields.io/npm/v/promise-queue.svg)](https://www.npmjs.com/package/promise-queue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A promise queue with configurable concurrency for limiting simultaneous task execution.
 
